@@ -27,6 +27,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parent.parent
 PUBLIC_CASES_DIR = ROOT_DIR / "data" / "cases"
 PRIVATE_KEYS_PATH = ROOT_DIR / "private_data" / "answer_keys.json"
+EXAMPLE_KEYS_PATH = ROOT_DIR / "data" / "answer_keys.example.json"
 NEXT_STATIC_DIR = ROOT_DIR / ".next" / "static"
 
 FORBIDDEN_CLIENT_KEYS = {
@@ -70,8 +71,9 @@ def main() -> int:
     assert expected_ids[0] == "TheFriendlyCoder__pyjen-113", f"Case #1 must be pyjen-113, got {expected_ids[0]}"
     assert expected_ids[1] == "Melevir__cognitive_complexity-15", f"Case #2 must be cognitive_complexity-15, got {expected_ids[1]}"
 
-    private_keys = json.loads(PRIVATE_KEYS_PATH.read_text(encoding="utf-8"))
-    assert len(private_keys) == 24, f"Expected 24 private answer keys, found {len(private_keys)}"
+    keys_path = PRIVATE_KEYS_PATH if PRIVATE_KEYS_PATH.exists() else EXAMPLE_KEYS_PATH
+    private_keys = json.loads(keys_path.read_text(encoding="utf-8"))
+    assert len(private_keys) == 24, f"Expected 24 answer keys in {keys_path}, found {len(private_keys)}"
 
     print(f"[1/6] Auditing public data/cases/*.json for zero answer-key leaks ...")
     public_cases: dict[str, dict] = {}
