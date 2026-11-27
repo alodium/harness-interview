@@ -1,0 +1,16 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies & build
+node_modules/
+.next/
+.vercel/
+tsconfig.tsbuildinfo
+__pycache__/
+*.pyc
+.DS_Store
+
+# Private answer keys, authoring scripts, QA spoilers & raw dataset dumps (NEVER commit)
+private_data/

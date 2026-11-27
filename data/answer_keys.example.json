@@ -1,0 +1,506 @@
+{
+  "TheFriendlyCoder__pyjen-113": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_7a9ae2bd",
+    "correct_rescue_id": "guard_7de5d852",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_7a9ae2bd": "Example placeholder explanation (real answer keys not configured).",
+      "diag_6d1250e4": "Example placeholder explanation (real answer keys not configured).",
+      "diag_069298d2": "Example placeholder explanation (real answer keys not configured).",
+      "diag_2a2202d8": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_7de5d852": "Example placeholder explanation (real answer keys not configured).",
+      "guard_23ad3280": "Example placeholder explanation (real answer keys not configured).",
+      "guard_6e14f13c": "Example placeholder explanation (real answer keys not configured).",
+      "guard_25f87822": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "Melevir__cognitive_complexity-15": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_2249e0a4",
+    "correct_rescue_id": "guard_f6f0ada1",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_2249e0a4": "Example placeholder explanation (real answer keys not configured).",
+      "diag_5d7986f8": "Example placeholder explanation (real answer keys not configured).",
+      "diag_27c1f482": "Example placeholder explanation (real answer keys not configured).",
+      "diag_1050fa71": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_f6f0ada1": "Example placeholder explanation (real answer keys not configured).",
+      "guard_9e05a8f0": "Example placeholder explanation (real answer keys not configured).",
+      "guard_bc89a117": "Example placeholder explanation (real answer keys not configured).",
+      "guard_26fb74b4": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "asottile__yesqa-44": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_6326138d",
+    "correct_rescue_id": "guard_516695f5",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_6326138d": "Example placeholder explanation (real answer keys not configured).",
+      "diag_bf71bfdc": "Example placeholder explanation (real answer keys not configured).",
+      "diag_2f48db9d": "Example placeholder explanation (real answer keys not configured).",
+      "diag_24b8a983": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_516695f5": "Example placeholder explanation (real answer keys not configured).",
+      "guard_d4dc63b9": "Example placeholder explanation (real answer keys not configured).",
+      "guard_f1ba5a92": "Example placeholder explanation (real answer keys not configured).",
+      "guard_e1121195": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "cunybpl__isdparser-4": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_6ab1563f",
+    "correct_rescue_id": "guard_bacf0a64",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_6ab1563f": "Example placeholder explanation (real answer keys not configured).",
+      "diag_5a85e4e1": "Example placeholder explanation (real answer keys not configured).",
+      "diag_6f448703": "Example placeholder explanation (real answer keys not configured).",
+      "diag_2028cdec": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_bacf0a64": "Example placeholder explanation (real answer keys not configured).",
+      "guard_62bb60c3": "Example placeholder explanation (real answer keys not configured).",
+      "guard_b6c9de51": "Example placeholder explanation (real answer keys not configured).",
+      "guard_0fd7fb08": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "fatiando__pooch-180": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_f264c0db",
+    "correct_rescue_id": "guard_36435187",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_f264c0db": "Example placeholder explanation (real answer keys not configured).",
+      "diag_737049c4": "Example placeholder explanation (real answer keys not configured).",
+      "diag_b2da997f": "Example placeholder explanation (real answer keys not configured).",
+      "diag_0f7eaa80": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_36435187": "Example placeholder explanation (real answer keys not configured).",
+      "guard_3a8ee345": "Example placeholder explanation (real answer keys not configured).",
+      "guard_c49c5d38": "Example placeholder explanation (real answer keys not configured).",
+      "guard_e0e23ae9": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "pact-foundation__pact-python-94": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_628952d2",
+    "correct_rescue_id": "guard_9ea592ee",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_628952d2": "Example placeholder explanation (real answer keys not configured).",
+      "diag_9c413475": "Example placeholder explanation (real answer keys not configured).",
+      "diag_f52672aa": "Example placeholder explanation (real answer keys not configured).",
+      "diag_fa411c43": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_9ea592ee": "Example placeholder explanation (real answer keys not configured).",
+      "guard_515ab2d3": "Example placeholder explanation (real answer keys not configured).",
+      "guard_0e8fae60": "Example placeholder explanation (real answer keys not configured).",
+      "guard_710fa24c": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "peterbe__premailer-218": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_ba76069e",
+    "correct_rescue_id": "guard_55330a1c",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_ba76069e": "Example placeholder explanation (real answer keys not configured).",
+      "diag_5055da09": "Example placeholder explanation (real answer keys not configured).",
+      "diag_79cadd24": "Example placeholder explanation (real answer keys not configured).",
+      "diag_dd0c4ba7": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_55330a1c": "Example placeholder explanation (real answer keys not configured).",
+      "guard_7c70f43c": "Example placeholder explanation (real answer keys not configured).",
+      "guard_8cf4311a": "Example placeholder explanation (real answer keys not configured).",
+      "guard_fc391844": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "serge-sans-paille__gast-50": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_e597c629",
+    "correct_rescue_id": "guard_a2e4fc71",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_e597c629": "Example placeholder explanation (real answer keys not configured).",
+      "diag_91cc2ce9": "Example placeholder explanation (real answer keys not configured).",
+      "diag_7a877360": "Example placeholder explanation (real answer keys not configured).",
+      "diag_1af46d9d": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_a2e4fc71": "Example placeholder explanation (real answer keys not configured).",
+      "guard_b653bab6": "Example placeholder explanation (real answer keys not configured).",
+      "guard_ddf62808": "Example placeholder explanation (real answer keys not configured).",
+      "guard_68a2df3a": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "mantidproject__mslice-848": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_5b75087e",
+    "correct_rescue_id": "guard_f2d94d43",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_5b75087e": "Example placeholder explanation (real answer keys not configured).",
+      "diag_d2e513f1": "Example placeholder explanation (real answer keys not configured).",
+      "diag_fe6c8f2b": "Example placeholder explanation (real answer keys not configured).",
+      "diag_9c1568fa": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_f2d94d43": "Example placeholder explanation (real answer keys not configured).",
+      "guard_a4043540": "Example placeholder explanation (real answer keys not configured).",
+      "guard_bfd416d4": "Example placeholder explanation (real answer keys not configured).",
+      "guard_fdae3bfd": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "stfc__PSyclone-1111": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_043c156d",
+    "correct_rescue_id": "guard_085574e6",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_043c156d": "Example placeholder explanation (real answer keys not configured).",
+      "diag_8245287c": "Example placeholder explanation (real answer keys not configured).",
+      "diag_ae32640c": "Example placeholder explanation (real answer keys not configured).",
+      "diag_9855ea2c": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_085574e6": "Example placeholder explanation (real answer keys not configured).",
+      "guard_07237c02": "Example placeholder explanation (real answer keys not configured).",
+      "guard_8fdcfd49": "Example placeholder explanation (real answer keys not configured).",
+      "guard_2204f86c": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "johnsyweb__python_sparse_list-17": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_87c66e38",
+    "correct_rescue_id": "guard_7f75daa3",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_87c66e38": "Example placeholder explanation (real answer keys not configured).",
+      "diag_90645824": "Example placeholder explanation (real answer keys not configured).",
+      "diag_27c65197": "Example placeholder explanation (real answer keys not configured).",
+      "diag_5fc24741": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_7f75daa3": "Example placeholder explanation (real answer keys not configured).",
+      "guard_6982f907": "Example placeholder explanation (real answer keys not configured).",
+      "guard_d54f3af9": "Example placeholder explanation (real answer keys not configured).",
+      "guard_f04beaf6": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "AnalogJ__lexicon-336": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_f1baf952",
+    "correct_rescue_id": "guard_e125b246",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_f1baf952": "Example placeholder explanation (real answer keys not configured).",
+      "diag_fecc6837": "Example placeholder explanation (real answer keys not configured).",
+      "diag_e5a9b307": "Example placeholder explanation (real answer keys not configured).",
+      "diag_619ceb7b": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_e125b246": "Example placeholder explanation (real answer keys not configured).",
+      "guard_3204080a": "Example placeholder explanation (real answer keys not configured).",
+      "guard_b7391931": "Example placeholder explanation (real answer keys not configured).",
+      "guard_19a9ced6": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "fair-workflows__nanopub-140": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_1e283854",
+    "correct_rescue_id": "guard_c9e3bd3a",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_1e283854": "Example placeholder explanation (real answer keys not configured).",
+      "diag_26d24e4b": "Example placeholder explanation (real answer keys not configured).",
+      "diag_09111827": "Example placeholder explanation (real answer keys not configured).",
+      "diag_f0962e78": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_c9e3bd3a": "Example placeholder explanation (real answer keys not configured).",
+      "guard_8366400e": "Example placeholder explanation (real answer keys not configured).",
+      "guard_cae35c51": "Example placeholder explanation (real answer keys not configured).",
+      "guard_bd0a2b67": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "iterative__dvc-3428": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_4b8ec1d3",
+    "correct_rescue_id": "guard_27b7ed1d",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_4b8ec1d3": "Example placeholder explanation (real answer keys not configured).",
+      "diag_e7eb70f3": "Example placeholder explanation (real answer keys not configured).",
+      "diag_b6b82855": "Example placeholder explanation (real answer keys not configured).",
+      "diag_76669688": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_27b7ed1d": "Example placeholder explanation (real answer keys not configured).",
+      "guard_8e68b446": "Example placeholder explanation (real answer keys not configured).",
+      "guard_5c28e45c": "Example placeholder explanation (real answer keys not configured).",
+      "guard_6c75f9d5": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "deardurham__ciprs-reader-38": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_baced130",
+    "correct_rescue_id": "guard_c80abe72",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_baced130": "Example placeholder explanation (real answer keys not configured).",
+      "diag_c828fafa": "Example placeholder explanation (real answer keys not configured).",
+      "diag_bc0c0a26": "Example placeholder explanation (real answer keys not configured).",
+      "diag_96a96e21": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_c80abe72": "Example placeholder explanation (real answer keys not configured).",
+      "guard_ec10d648": "Example placeholder explanation (real answer keys not configured).",
+      "guard_7b06befe": "Example placeholder explanation (real answer keys not configured).",
+      "guard_27c1fb96": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "pydantic__pydantic-2366": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_b81f1d34",
+    "correct_rescue_id": "guard_c509a047",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_b81f1d34": "Example placeholder explanation (real answer keys not configured).",
+      "diag_01d0b29a": "Example placeholder explanation (real answer keys not configured).",
+      "diag_f1acf641": "Example placeholder explanation (real answer keys not configured).",
+      "diag_d65628dc": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_c509a047": "Example placeholder explanation (real answer keys not configured).",
+      "guard_a554666e": "Example placeholder explanation (real answer keys not configured).",
+      "guard_94612f76": "Example placeholder explanation (real answer keys not configured).",
+      "guard_0ce4c949": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "iterative__dvc-3709": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_d63b24cd",
+    "correct_rescue_id": "guard_99e39a27",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_d63b24cd": "Example placeholder explanation (real answer keys not configured).",
+      "diag_474d9b1b": "Example placeholder explanation (real answer keys not configured).",
+      "diag_0c8a887a": "Example placeholder explanation (real answer keys not configured).",
+      "diag_9fe616d6": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_99e39a27": "Example placeholder explanation (real answer keys not configured).",
+      "guard_a448eef7": "Example placeholder explanation (real answer keys not configured).",
+      "guard_81d1b317": "Example placeholder explanation (real answer keys not configured).",
+      "guard_9ea54dca": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "konradhalas__dacite-216": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_5b6a29f5",
+    "correct_rescue_id": "guard_f8b62f00",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_5b6a29f5": "Example placeholder explanation (real answer keys not configured).",
+      "diag_d5af2ca9": "Example placeholder explanation (real answer keys not configured).",
+      "diag_fc0434fe": "Example placeholder explanation (real answer keys not configured).",
+      "diag_668ae30d": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_f8b62f00": "Example placeholder explanation (real answer keys not configured).",
+      "guard_a0fa8b69": "Example placeholder explanation (real answer keys not configured).",
+      "guard_67df84db": "Example placeholder explanation (real answer keys not configured).",
+      "guard_5df97aee": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "reata__sqllineage-17": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_4395efb4",
+    "correct_rescue_id": "guard_c0466232",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_4395efb4": "Example placeholder explanation (real answer keys not configured).",
+      "diag_3d52f2cc": "Example placeholder explanation (real answer keys not configured).",
+      "diag_fdb81d2e": "Example placeholder explanation (real answer keys not configured).",
+      "diag_82cb7647": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_c0466232": "Example placeholder explanation (real answer keys not configured).",
+      "guard_87f8c45c": "Example placeholder explanation (real answer keys not configured).",
+      "guard_2cf4678a": "Example placeholder explanation (real answer keys not configured).",
+      "guard_dcbfb25e": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "andialbrecht__sqlparse-445": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_ba3d0021",
+    "correct_rescue_id": "guard_b7a1ca22",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_ba3d0021": "Example placeholder explanation (real answer keys not configured).",
+      "diag_8dc2b929": "Example placeholder explanation (real answer keys not configured).",
+      "diag_b4c99477": "Example placeholder explanation (real answer keys not configured).",
+      "diag_7147a590": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_b7a1ca22": "Example placeholder explanation (real answer keys not configured).",
+      "guard_b843bace": "Example placeholder explanation (real answer keys not configured).",
+      "guard_a57f0854": "Example placeholder explanation (real answer keys not configured).",
+      "guard_b801d2c7": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "oasis-open__cti-python-stix2-342": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_9ddb5712",
+    "correct_rescue_id": "guard_6dfcb58e",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_9ddb5712": "Example placeholder explanation (real answer keys not configured).",
+      "diag_2d1e8350": "Example placeholder explanation (real answer keys not configured).",
+      "diag_3d180de1": "Example placeholder explanation (real answer keys not configured).",
+      "diag_28db6f11": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_6dfcb58e": "Example placeholder explanation (real answer keys not configured).",
+      "guard_95d869b6": "Example placeholder explanation (real answer keys not configured).",
+      "guard_394dced9": "Example placeholder explanation (real answer keys not configured).",
+      "guard_ecf04157": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "singingwolfboy__flask-dance-107": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_5c1300e9",
+    "correct_rescue_id": "guard_a4a3fe98",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_5c1300e9": "Example placeholder explanation (real answer keys not configured).",
+      "diag_b51cc7dc": "Example placeholder explanation (real answer keys not configured).",
+      "diag_aa71821c": "Example placeholder explanation (real answer keys not configured).",
+      "diag_c74a7c82": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_a4a3fe98": "Example placeholder explanation (real answer keys not configured).",
+      "guard_5f6b9996": "Example placeholder explanation (real answer keys not configured).",
+      "guard_cd199010": "Example placeholder explanation (real answer keys not configured).",
+      "guard_9f8bf79f": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "spdx__tools-python-480": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_59040d93",
+    "correct_rescue_id": "guard_465d63f9",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_59040d93": "Example placeholder explanation (real answer keys not configured).",
+      "diag_33fcb591": "Example placeholder explanation (real answer keys not configured).",
+      "diag_8cf2d368": "Example placeholder explanation (real answer keys not configured).",
+      "diag_b4bcc62e": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_465d63f9": "Example placeholder explanation (real answer keys not configured).",
+      "guard_e0e98e11": "Example placeholder explanation (real answer keys not configured).",
+      "guard_1561740a": "Example placeholder explanation (real answer keys not configured).",
+      "guard_9fc501b1": "Example placeholder explanation (real answer keys not configured)."
+    }
+  },
+  "PyCQA__pyflakes-761": {
+    "failure_step": 1,
+    "failure_type": "example_placeholder",
+    "correct_diagnosis_id": "diag_5d99df5c",
+    "correct_rescue_id": "guard_862d72ac",
+    "root_cause": "Placeholder explanation from data/answer_keys.example.json. Configure private_data/answer_keys.json or ANSWER_KEYS_URL for real grading.",
+    "rescue_prompt_criteria": "Placeholder harness criterion (example keys active).",
+    "gold_patch": "# Example placeholder diff — configure ANSWER_KEYS_URL or private_data/answer_keys.json to reveal the real Gold Patch.\n",
+    "diagnosis_explanations": {
+      "diag_5d99df5c": "Example placeholder explanation (real answer keys not configured).",
+      "diag_b278268d": "Example placeholder explanation (real answer keys not configured).",
+      "diag_36c16009": "Example placeholder explanation (real answer keys not configured).",
+      "diag_109a4b57": "Example placeholder explanation (real answer keys not configured)."
+    },
+    "rescue_explanations": {
+      "guard_862d72ac": "Example placeholder explanation (real answer keys not configured).",
+      "guard_137e43d8": "Example placeholder explanation (real answer keys not configured).",
+      "guard_1b8956d5": "Example placeholder explanation (real answer keys not configured).",
+      "guard_dda2adc6": "Example placeholder explanation (real answer keys not configured)."
+    }
+  }
+}

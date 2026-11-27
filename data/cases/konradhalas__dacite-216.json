@@ -1,0 +1,106 @@
+{
+  "instance_id": "konradhalas__dacite-216",
+  "case_number": 18,
+  "title": "Fields with default_factory share mutable default across instances",
+  "difficulty": "Medium",
+  "repo": "konradhalas/dacite",
+  "base_commit": "c076b8c3b3",
+  "model_name": "swe-agent-llama-70b",
+  "source_dataset": "nebius/SWE-agent-trajectories",
+  "initial_prompt": "SYSTEM (SWE-agent Harness):\nYou are an autonomous software engineering agent operating inside an interactive terminal at the root of `konradhalas/dacite` (commit c076b8c3b3).\n\nUSER (Task Dispatch):\nWe are currently solving the following GitHub issue within this repository:\n  Issue: Fields with default_factory share mutable default across instances\n  (Full issue text provided in Section 1 above.)\n\nINSTRUCTIONS:\nSolve this issue on your own using the available terminal and file-editing commands (open, goto, scroll_down, search_dir, search_file, edit, create, bash). When you are satisfied with your changes, run `submit` to export your git diff for automated test evaluation.",
+  "step_count": 9,
+  "problem_statement": "Incorrect work when using field with default_factory\n**Describe the bug**\r\n`default_factory` is called only once if a field absent in the data\r\n\r\n**To Reproduce**\r\n```python\r\n#!/usr/bin/env python\r\n\r\nfrom dataclasses import field, dataclass\r\n\r\nfrom dacite import from_dict\r\n\r\n\r\n@dataclass\r\nclass A:\r\n    name: str\r\n    items: list[str] = field(default_factory=list)\r\n\r\n\r\nif __name__ == '__main__':\r\n    a1 = from_dict(A, {'name': 'a1'})\r\n    a2 = from_dict(A, {'name': 'a2'})\r\n    print('Test identity:', a1.items is a2.items)\r\n```\r\n**Output**\r\n```\r\nTest identity: True\r\n```\r\n\r\n**Expected behavior**\r\n`items` shouldn't be identical.\r\n`dacite v1.7.0` works as expected\r\n```\r\nTest identity: False\r\n```\r\n\r\n**Environment**\r\n- Python version: 3.9.16\r\n- `dacite` version: 1.8.0",
+  "broken_patch": "diff --git a/dacite/core.py b/dacite/core.py\nindex 9e45129..333cfe6 100644\n--- a/dacite/core.py\n+++ b/dacite/core.py\n@@ -69,7 +69,10 @@ def from_dict(data_class: Type[T], data: Data, config: Optional[Config] = None)\n                 raise WrongTypeError(field_path=field.name, field_type=field_type, value=value)\n         else:\n             try:\n-                value = get_default_value_for_field(field, field_type)\n+                if field.default_factory:\n+                    value = field.default_factory()\n+                else:\n+                    value = get_default_value_for_field(field, field_type)\n             except DefaultValueNotFoundError:\n                 if not field.init:\n                     continue",
+  "trajectory": [
+    {
+      "step": 1,
+      "thought": "To begin addressing the issue, we should first try to replicate the reported behavior. The issue includes some example code for reproduction, which we can use. We'll create a new file called `reproduce.py` and paste the example code into it.",
+      "action": "create reproduce.py",
+      "observation": "[File: /dacite/reproduce.py (1 lines total)]\n1:\n\n(Open file: /dacite/reproduce.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 2,
+      "thought": "Now let's paste in the example code from the issue into `reproduce.py`.",
+      "action": "edit 1:1\n#!/usr/bin/env python\n\nfrom dataclasses import field, dataclass\n\nfrom dacite import from_dict\n\n@dataclass\nclass A:\n    name: str\n    items: list[str] = field(default_factory=list)\n\nif __name__ == '__main__':\n    a1 = from_dict(A, {'name': 'a1'})\n    a2 = from_dict(A, {'name': 'a2'})\n    print('Test identity:', a1.items is a2.items)\nend_of_edit",
+      "observation": "[File: /dacite/reproduce.py (15 lines total)]\n1:#!/usr/bin/env python\n2:\n3:from dataclasses import field, dataclass\n4:\n5:from dacite import from_dict\n6:\n7:@dataclass\n8:class A:\n9:    name: str\n10:    items: list[str] = field(default_factory=list)\n11:\n12:if __name__ == '__main__':\n13:    a1 = from_dict(A, {'name': 'a1'})\n14:    a2 = from_dict(A, {'name': 'a2'})\n15:    print('Test identity:', a1.items is a2.items)\nFile updated. Please review the changes and make sure they are correct (correct indentation, no duplicate lines, etc). Edit the file again if necessary.\n\n(Open file: /dacite/reproduce.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 3,
+      "thought": "The reproduction code has been added to `reproduce.py`. Now let's run the script to see if we can reproduce the issue.",
+      "action": "python reproduce.py",
+      "observation": "Test identity: True\n\n(Open file: /dacite/reproduce.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 4,
+      "thought": "The output `Test identity: True` confirms that the issue is present: the `items` field is being shared between instances, even though it has a `default_factory` set. This behavior is likely due to how `dacite` handles fields with `default_factory`.\n\nTo fix this, we need to ensure that `dacite` calls the `default_factory` function for each new instance, rather than using the same default value for all instances. This might involve modifying the `from_dict` function or the `dacite` configuration.\n\nFirst, let's locate the `from_dict` function in the `dacite` codebase to understand how it works. We'll search for the `from_dict` function definition within the repository.",
+      "action": "search_dir \"def from_dict\"",
+      "observation": "Found 1 matches for \"def from_dict\" in /dacite:\n/dacite/dacite/core.py (1 matches)\nEnd of matches for \"def from_dict\" in /dacite\n\n(Open file: /dacite/reproduce.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 5,
+      "thought": "The `from_dict` function is located in the `dacite/core.py` file. Let's open that file to examine the implementation of the `from_dict` function and understand why it might not be calling `default_factory` correctly.",
+      "action": "open dacite/core.py",
+      "observation": "[File: /dacite/dacite/core.py (155 lines total)]\n1:from dataclasses import is_dataclass\n2:from itertools import zip_longest\n3:from typing import TypeVar, Type, Optional, get_type_hints, Mapping, Any, Collection, MutableMapping\n4:\n5:from dacite.cache import cache\n6:from dacite.config import Config\n7:from dacite.data import Data\n8:from dacite.dataclasses import (\n9:    get_default_value_for_field,\n10:    DefaultValueNotFoundError,\n11:    get_fields,\n12:    is_frozen,\n13:)\n14:from dacite.exceptions import (\n15:    ForwardReferenceError,\n16:    WrongTypeError,\n17:    DaciteError,\n18:    UnionMatchError,\n19:    MissingValueError,\n20:    DaciteFieldError,\n21:    UnexpectedDataError,\n22:    StrictUnionMatchError,\n23:)\n24:from dacite.types import (\n25:    is_instance,\n26:    is_generic_collection,\n27:    is_union,\n28:    extract_generic,\n29:    is_optional,\n30:    extract_origin_collection,\n31:    is_init_var,\n32:    extract_init_var,\n33:    is_subclass,\n34:)\n35:\n36:T = TypeVar(\"T\")\n37:\n38:\n39:def from_dict(data_class: Type[T], data: Data, config: Optional[Config] = None) -> T:\n40:    \"\"\"Create a data class instance from a dictionary.\n41:\n42:    :param data_class: a data class type\n43:    :param data: a dictionary of a input data\n44:    :param config: a configuration of the creation process\n45:    :return: an instance of a data class\n46:    \"\"\"\n47:    init_values: MutableMapping[str, Any] = {}\n48:    post_init_values: MutableMapping[str, Any] = {}\n49:    config = config or Config()\n50:    try:\n51:        data_class_hints = cache(get_type_hints)(data_class, localns=config.hashable_forward_references)\n52:    except NameError as error:\n53:        raise ForwardReferenceError(str(error))\n54:    data_class_fields = cache(get_fields)(data_class)\n55:    if config.strict:\n56:        extra_fields = set(data.keys()) - {f.name for f in data_class_fields}\n57:        if extra_fields:\n58:            raise UnexpectedDataError(keys=extra_fields)\n59:    for field in data_class_fields:\n60:        field_type = data_class_hints[field.name]\n61:        if field.name in data:\n62:            try:\n63:                field_data = data[field.name]\n64:                value = _build_value(type_=field_type, data=field_data, config=config)\n65:            except DaciteFieldError as error:\n66:                error.update_path(field.name)\n67:                raise\n68:            if config.check_types and not is_instance(value, field_type):\n69:                raise WrongTypeError(field_path=field.name, field_type=field_type, value=value)\n70:        else:\n71:            try:\n72:                value = get_default_value_for_field(field, field_type)\n73:            except DefaultValueNotFoundError:\n74:                if not field.init:\n75:                    continue\n76:                raise MissingValueError(field.name)\n77:        if field.init:\n78:            init_values[field.name] = value\n79:        elif not is_frozen(data_class):\n80:            post_init_values[field.name] = value\n81:    instance = data_class(**init_values)\n82:    for key, value in post_init_values.items():\n83:        setattr(instance, key, value)\n84:    return instance\n85:\n86:\n87:def _build_value(type_: Type, data: Any, config: Config) -> Any:\n88:    if is_init_var(type_):\n89:        type_ = extract_init_var(type_)\n90:    if type_ in config.type_hooks:\n91:        data = config.type_hooks[type_](data)\n92:    if is_optional(type_) and data is None:\n93:        return data\n94:    if is_union(type_):\n95:        data = _build_value_for_union(union=type_, data=data, config=config)\n96:    elif is_generic_collection(type_):\n97:        data = _build_value_for_collection(collection=type_, data=data, config=config)\n98:    elif cache(is_dataclass)(type_) and isinstance(data, Mapping):\n99:        data = from_dict(data_class=type_, data=data, config=config)\n100:    for cast_type in config.cast:\n(55 more lines below)\n\n(Open file: /dacite/dacite/core.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 6,
+      "thought": "The `from_dict` function is responsible for creating a data class instance from a dictionary. The issue likely lies in how the function handles fields with `default_factory`. Specifically, it might not be calling the `default_factory` function for each new instance.\n\nTo ensure that `default_factory` is called correctly, we need to modify the `from_dict` function to handle fields with `default_factory` appropriately. This might involve ensuring that the `default_factory` function is called for each new instance, rather than using the same default value for all instances.\n\nLet's make the necessary modifications to the `from_dict` function. We will need to ensure that when a field has a `default_factory`, it is called to produce a new value for each instance.",
+      "action": "edit 39:84\ndef from_dict(data_class: Type[T], data: Data, config: Optional[Config] = None) -> T:\n    \"\"\"Create a data class instance from a dictionary.\n\n    :param data_class: a data class type\n    :param data: a dictionary of a input data\n    :param config: a configuration of the creation process\n    :return: an instance of a data class\n    \"\"\"\n    init_values: MutableMapping[str, Any] = {}\n    post_init_values: MutableMapping[str, Any] = {}\n    config = config or Config()\n    try:\n        data_class_hints = cache(get_type_hints)(data_class, localns=config.hashable_forward_references)\n    except NameError as error:\n        raise ForwardReferenceError(str(error))\n    data_class_fields = cache(get_fields)(data_class)\n    if config.strict:\n        extra_fields = set(data.keys()) - {f.name for f in data_class_fields}\n        if extra_fields:\n            raise UnexpectedDataError(keys=extra_fields)\n    for field in data_class_fields:\n        field_type = data_class_hints[field.name]\n        if field.name in data:\n            try:\n                field_data = data[field.name]\n                value = _build_value(type_=field_type, data=field_data, config=config)\n            except DaciteFieldError as error:\n                error.update_path(field.name)\n                raise\n            if config.check_types and not is_instance(value, field_type):\n                raise WrongTypeError(field_path=field.name, field_type=field_type, value=value)\n        else:\n            try:\n                if field.default_factory:\n                    value = field.default_factory()\n                else:\n                    value = get_default_value_for_field(field, field_type)\n            except DefaultValueNotFoundError:\n                if not field.init:\n                    continue\n                raise MissingValueError(field.name)\n        if field.init:\n            init_values[field.name] = value\n        elif not is_frozen(data_class):\n            post_init_values[field.name] = value\n    instance = data_class(**init_values)\n    for key, value in post_init_values.items():\n        setattr(instance, key, value)\n    return instance\nend_of_edit",
+      "observation": "[File: /dacite/dacite/core.py (158 lines total)]\n1:from dataclasses import is_dataclass\n2:from itertools import zip_longest\n3:from typing import TypeVar, Type, Optional, get_type_hints, Mapping, Any, Collection, MutableMapping\n4:\n5:from dacite.cache import cache\n6:from dacite.config import Config\n7:from dacite.data import Data\n8:from dacite.dataclasses import (\n9:    get_default_value_for_field,\n10:    DefaultValueNotFoundError,\n11:    get_fields,\n12:    is_frozen,\n13:)\n14:from dacite.exceptions import (\n15:    ForwardReferenceError,\n16:    WrongTypeError,\n17:    DaciteError,\n18:    UnionMatchError,\n19:    MissingValueError,\n20:    DaciteFieldError,\n21:    UnexpectedDataError,\n22:    StrictUnionMatchError,\n23:)\n24:from dacite.types import (\n25:    is_instance,\n26:    is_generic_collection,\n27:    is_union,\n28:    extract_generic,\n29:    is_optional,\n30:    extract_origin_collection,\n31:    is_init_var,\n32:    extract_init_var,\n33:    is_subclass,\n34:)\n35:\n36:T = TypeVar(\"T\")\n37:\n38:\n39:def from_dict(data_class: Type[T], data: Data, config: Optional[Config] = None) -> T:\n40:    \"\"\"Create a data class instance from a dictionary.\n41:\n42:    :param data_class: a data class type\n43:    :param data: a dictionary of a input data\n44:    :param config: a configuration of the creation process\n45:    :return: an instance of a data class\n46:    \"\"\"\n47:    init_values: MutableMapping[str, Any] = {}\n48:    post_init_values: MutableMapping[str, Any] = {}\n49:    config = config or Config()\n50:    try:\n51:        data_class_hints = cache(get_type_hints)(data_class, localns=config.hashable_forward_references)\n52:    except NameError as error:\n53:        raise ForwardReferenceError(str(error))\n54:    data_class_fields = cache(get_fields)(data_class)\n55:    if config.strict:\n56:        extra_fields = set(data.keys()) - {f.name for f in data_class_fields}\n57:        if extra_fields:\n58:            raise UnexpectedDataError(keys=extra_fields)\n59:    for field in data_class_fields:\n60:        field_type = data_class_hints[field.name]\n61:        if field.name in data:\n62:            try:\n63:                field_data = data[field.name]\n64:                value = _build_value(type_=field_type, data=field_data, config=config)\n65:            except DaciteFieldError as error:\n66:                error.update_path(field.name)\n67:                raise\n68:            if config.check_types and not is_instance(value, field_type):\n69:                raise WrongTypeError(field_path=field.name, field_type=field_type, value=value)\n70:        else:\n71:            try:\n72:                if field.default_factory:\n73:                    value = field.default_factory()\n74:                else:\n75:                    value = get_default_value_for_field(field, field_type)\n76:            except DefaultValueNotFoundError:\n77:                if not field.init:\n78:                    continue\n79:                raise MissingValueError(field.name)\n80:        if field.init:\n81:            init_values[field.name] = value\n82:        elif not is_frozen(data_class):\n83:            post_init_values[field.name] = value\n84:    instance = data_class(**init_values)\n85:    for key, value in post_init_values.items():\n86:        setattr(instance, key, value)\n87:    return instance\n88:\n89:\n90:def _build_value(type_: Type, data: Any, config: Config) -> Any:\n91:    if is_init_var(type_):\n92:        type_ = extract_init_var(type_)\n93:    if type_ in config.type_hooks:\n94:        data = config.type_hooks[type_](data)\n95:    if is_optional(type_) and data is None:\n96:        return data\n97:    if is_union(type_):\n98:        data = _build_value_for_union(union=type_, data=data, config=config)\n99:    elif is_generic_collection(type_):\n100:        data = _build_value_for_collection(collection=type_, data=data, config=config)\n(58 more lines below)\nFile updated. Please review the changes and make sure they are correct (correct indentation, no duplicate lines, etc). Edit the file again if necessary.\n\n(Open file: /dacite/dacite/core.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 7,
+      "thought": "The `from_dict` function has been updated to handle fields with `default_factory` correctly. Before submitting the changes, it's important to re-run the `reproduce.py` script to ensure that the issue has been resolved.",
+      "action": "python reproduce.py",
+      "observation": "Test identity: False\n\n(Open file: /dacite/dacite/core.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 8,
+      "thought": "The output `Test identity: False` indicates that the issue has been resolved, as the `items` field is no longer shared between instances. This confirms that the `default_factory` is now being called correctly for each new instance.\n\nSince the issue is fixed, we can proceed to clean up by removing the `reproduce.py` script, as it is no longer needed.",
+      "action": "rm reproduce.py",
+      "observation": "Your command ran successfully and did not produce any output.\n(Open file: /dacite/dacite/core.py)\n(Current directory: /dacite)\nbash-$"
+    },
+    {
+      "step": 9,
+      "thought": "The `reproduce.py` script has been successfully removed. Now that we have fixed the issue and verified the solution, we can submit our changes to the code base. Let's submit the changes using the `submit` command.",
+      "action": "submit",
+      "observation": "(Session ended after this command)"
+    }
+  ],
+  "diagnosis_options": [
+    {
+      "id": "diag_5b6a29f5",
+      "text": "The agent deep-copied resolved field defaults inside the recursive value builder, leaving top-level missing attributes bound to the same shared list object."
+    },
+    {
+      "id": "diag_d5af2ca9",
+      "text": "The agent bypassed the default-resolution helper without inspecting its caching, checked a truthy dataclass sentinel as boolean, and skipped the full test suite."
+    },
+    {
+      "id": "diag_fc0434fe",
+      "text": "The agent cleared memoized field metadata prior to dictionary parsing, breaking type-hint resolution on nested classes while leaving factory sharing unfixed."
+    },
+    {
+      "id": "diag_668ae30d",
+      "text": "The agent invoked factory callables once during class-field discovery rather than per instance creation, causing subsequent calls to reuse that initial list."
+    }
+  ],
+  "rescue_options": [
+    {
+      "id": "guard_f8b62f00",
+      "text": "Enforce an automated syntax and undefined-symbol linter hook on every file edit so malformed expressions and unresolved names are rejected immediately on write."
+    },
+    {
+      "id": "guard_a0fa8b69",
+      "text": "Require a protected-paths policy blocking direct edits to existing unit test files unless the user prompt explicitly authorizes updating regression assertions."
+    },
+    {
+      "id": "guard_67df84db",
+      "text": "Inject an automated loop-detection monitor that halts execution and summarizes prior findings whenever identical search commands repeat across three consecutive turns."
+    },
+    {
+      "id": "guard_5df97aee",
+      "text": "Require callee definition inspection before bypassing internal helpers at call sites, and block submit until the existing unit test suite executes without error."
+    }
+  ]
+}

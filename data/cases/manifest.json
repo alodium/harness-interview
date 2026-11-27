@@ -1,0 +1,196 @@
+{
+  "cases": [
+    {
+      "instance_id": "TheFriendlyCoder__pyjen-113",
+      "case_number": 1,
+      "title": "Add helper methods to query installed PyJen plugins",
+      "difficulty": "Easy",
+      "repo": "TheFriendlyCoder/pyjen",
+      "step_count": 9
+    },
+    {
+      "instance_id": "Melevir__cognitive_complexity-15",
+      "case_number": 2,
+      "title": "Incorrect counting for sequences of binary logical operators",
+      "difficulty": "Medium",
+      "repo": "Melevir/cognitive_complexity",
+      "step_count": 11
+    },
+    {
+      "instance_id": "asottile__yesqa-44",
+      "case_number": 3,
+      "title": "yesqa raises ValueError when flake8 show-source is enabled",
+      "difficulty": "Easy",
+      "repo": "asottile/yesqa",
+      "step_count": 6
+    },
+    {
+      "instance_id": "cunybpl__isdparser-4",
+      "case_number": 4,
+      "title": "Trailing whitespace in NOAA observation codes breaks mapping lookup",
+      "difficulty": "Easy",
+      "repo": "cunybpl/isdparser",
+      "step_count": 6
+    },
+    {
+      "instance_id": "fatiando__pooch-180",
+      "case_number": 5,
+      "title": "Comments in registry file?",
+      "difficulty": "Easy",
+      "repo": "fatiando/pooch",
+      "step_count": 6
+    },
+    {
+      "instance_id": "pact-foundation__pact-python-94",
+      "case_number": 6,
+      "title": "given / provider state should not be necessary",
+      "difficulty": "Easy",
+      "repo": "pact-foundation/pact-python",
+      "step_count": 6
+    },
+    {
+      "instance_id": "peterbe__premailer-218",
+      "case_number": 7,
+      "title": "Reusing premailer instances does not work",
+      "difficulty": "Easy",
+      "repo": "peterbe/premailer",
+      "step_count": 6
+    },
+    {
+      "instance_id": "serge-sans-paille__gast-50",
+      "case_number": 8,
+      "title": "ast.Assign need type_comment in Python3.8",
+      "difficulty": "Easy",
+      "repo": "serge-sans-paille/gast",
+      "step_count": 6
+    },
+    {
+      "instance_id": "mantidproject__mslice-848",
+      "case_number": 9,
+      "title": "Crash when opening plot options for cut plot with unsupported colour",
+      "difficulty": "Easy",
+      "repo": "mantidproject/mslice",
+      "step_count": 7
+    },
+    {
+      "instance_id": "stfc__PSyclone-1111",
+      "case_number": 10,
+      "title": "Call.create method should be a classmethod rather than staticmethod",
+      "difficulty": "Easy",
+      "repo": "stfc/PSyclone",
+      "step_count": 7
+    },
+    {
+      "instance_id": "johnsyweb__python_sparse_list-17",
+      "case_number": 11,
+      "title": "Deleting an empty slice from SparseList raises IndexError",
+      "difficulty": "Easy",
+      "repo": "johnsyweb/python_sparse_list",
+      "step_count": 8
+    },
+    {
+      "instance_id": "AnalogJ__lexicon-336",
+      "case_number": 12,
+      "title": "Memset provider: TypeError: string indices must be integers",
+      "difficulty": "Easy",
+      "repo": "AnalogJ/lexicon",
+      "step_count": 9
+    },
+    {
+      "instance_id": "fair-workflows__nanopub-140",
+      "case_number": 13,
+      "title": "Deprecation warning coming from click in test_setup_profile",
+      "difficulty": "Easy",
+      "repo": "fair-workflows/nanopub",
+      "step_count": 9
+    },
+    {
+      "instance_id": "iterative__dvc-3428",
+      "case_number": 14,
+      "title": "Adding empty files fails when cache type is set to hardlink",
+      "difficulty": "Easy",
+      "repo": "iterative/dvc",
+      "step_count": 10
+    },
+    {
+      "instance_id": "deardurham__ciprs-reader-38",
+      "case_number": 15,
+      "title": "CaseDetails header parser truncates multi-word county names",
+      "difficulty": "Easy",
+      "repo": "deardurham/ciprs-reader",
+      "step_count": 14
+    },
+    {
+      "instance_id": "pydantic__pydantic-2366",
+      "case_number": 16,
+      "title": "BaseModel raises KeyError when module is loaded via importlib",
+      "difficulty": "Easy",
+      "repo": "pydantic/pydantic",
+      "step_count": 15
+    },
+    {
+      "instance_id": "iterative__dvc-3709",
+      "case_number": 17,
+      "title": "dvc run does not validate parameters before executing command",
+      "difficulty": "Medium",
+      "repo": "iterative/dvc",
+      "step_count": 9
+    },
+    {
+      "instance_id": "konradhalas__dacite-216",
+      "case_number": 18,
+      "title": "Fields with default_factory share mutable default across instances",
+      "difficulty": "Medium",
+      "repo": "konradhalas/dacite",
+      "step_count": 9
+    },
+    {
+      "instance_id": "reata__sqllineage-17",
+      "case_number": 19,
+      "title": "Subquery alias mistaken for source table name",
+      "difficulty": "Medium",
+      "repo": "reata/sqllineage",
+      "step_count": 11
+    },
+    {
+      "instance_id": "andialbrecht__sqlparse-445",
+      "case_number": 20,
+      "title": "strip_comments=True produces syntax error without space",
+      "difficulty": "Medium",
+      "repo": "andialbrecht/sqlparse",
+      "step_count": 14
+    },
+    {
+      "instance_id": "oasis-open__cti-python-stix2-342",
+      "case_number": 21,
+      "title": "Adding Cyber Observable Object to MemoryStore raises KeyError",
+      "difficulty": "Medium",
+      "repo": "oasis-open/cti-python-stix2",
+      "step_count": 14
+    },
+    {
+      "instance_id": "singingwolfboy__flask-dance-107",
+      "case_number": 22,
+      "title": "OAuth2 proxy access_token returns None when token dict is present",
+      "difficulty": "Medium",
+      "repo": "singingwolfboy/flask-dance",
+      "step_count": 15
+    },
+    {
+      "instance_id": "spdx__tools-python-480",
+      "case_number": 23,
+      "title": "Tag-value parser rejects PackageVersion values containing colons",
+      "difficulty": "Hard",
+      "repo": "spdx/tools-python",
+      "step_count": 15
+    },
+    {
+      "instance_id": "PyCQA__pyflakes-761",
+      "case_number": 24,
+      "title": "Produce error when class attribute is hidden by a method",
+      "difficulty": "Hard",
+      "repo": "PyCQA/pyflakes",
+      "step_count": 28
+    }
+  ]
+}
