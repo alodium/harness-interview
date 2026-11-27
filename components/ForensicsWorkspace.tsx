@@ -621,7 +621,7 @@ export function ForensicsWorkspace() {
               rel="noopener noreferrer"
               className="text-zinc-400 hover:text-blue-400 transition"
             >
-              Dataset ↗
+              Hugging Face Dataset ↗
             </a>
           </div>
 
@@ -1396,7 +1396,16 @@ export function ForensicsWorkspace() {
             >
               nebius/SWE-bench-extra
             </a>{' '}
-            (CC BY 4.0) · Permissively licensed open-source repositories.
+            (
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-zinc-200 underline underline-offset-2"
+            >
+              CC BY 4.0
+            </a>
+            ) · Built with Llama · Permissively licensed open-source repositories.
           </div>
           <button
             type="button"
@@ -1553,7 +1562,7 @@ export function ForensicsWorkspace() {
                 ✕
               </button>
             </div>
-            <div className="p-6 overflow-y-auto space-y-4 text-sm text-zinc-300 leading-relaxed">
+            <div className="p-6 overflow-y-auto space-y-5 text-sm text-zinc-300 leading-relaxed">
               <div className="space-y-1.5">
                 <h4 className="font-semibold text-white">
                   1. Datasets — Creative Commons Attribution 4.0 (CC BY 4.0)
@@ -1577,14 +1586,50 @@ export function ForensicsWorkspace() {
                   >
                     nebius/SWE-bench-extra
                   </a>{' '}
-                  by Nebius under CC BY 4.0.
+                  by Nebius, licensed under{' '}
+                  <a
+                    href="https://creativecommons.org/licenses/by/4.0/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    CC BY 4.0
+                  </a>
+                  .
+                </p>
+                <p className="text-xs text-zinc-400">
+                  Modifications made: raw chat-message trajectories were parsed into neutral numbered{' '}
+                  <code className="font-mono text-zinc-300">{'{step, thought, action, observation}'}</code>{' '}
+                  steps, paired with original multiple-choice post-mortem questions and explanations, and served locally as sanitized JSON files.
                 </p>
               </div>
 
               <div className="space-y-1.5">
                 <h4 className="font-semibold text-white">
-                  2. Upstream Open-Source Repositories (MIT / BSD / Apache-2.0)
+                  2. Model Outputs — Built with Llama (Llama 3.1 Community License)
                 </h4>
+                <p className="text-xs text-zinc-400 leading-relaxed">
+                  Agent reasoning traces in the Nebius dataset were generated using{' '}
+                  <span className="font-mono text-zinc-300">Meta-Llama-3.1-70B-Instruct</span>. Built with Llama. Model outputs are subject to the{' '}
+                  <a
+                    href="https://www.llama.com/llama3_1/license/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    Llama 3.1 Community License Agreement
+                  </a>
+                  .
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="font-semibold text-white">
+                  3. Upstream Open-Source Repositories (MIT / BSD-3-Clause / Apache-2.0)
+                </h4>
+                <p className="text-xs text-zinc-400">
+                  Issue descriptions and unified diffs originate from the following permissively licensed repositories (all copyrights remain with their respective authors):
+                </p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 pl-4 list-disc font-mono text-xs text-zinc-300">
                   {Array.from(new Set(cases.map((c) => c.repo).filter(Boolean))).map((repo) => (
                     <li key={repo}>
@@ -1600,6 +1645,13 @@ export function ForensicsWorkspace() {
                   ))}
                 </ul>
               </div>
+
+              <pre className="p-3.5 rounded-lg bg-[#0a0a0a] font-mono text-[11px] text-zinc-400 whitespace-pre-wrap leading-relaxed">
+{`Copyright notices remain with each respective upstream repository author.
+All third-party dataset excerpts and code diffs are provided "AS IS", WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, in accordance with CC BY 4.0 and
+each upstream repository's MIT, BSD-3-Clause, or Apache-2.0 license.`}
+              </pre>
             </div>
           </div>
         </div>

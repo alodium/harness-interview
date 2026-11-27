@@ -20,7 +20,14 @@ Harness Interview incorporates adapted agent trajectories, issue descriptions, a
 
 ---
 
-## 2. Upstream Open-Source Repositories (MIT / BSD / Apache-2.0)
+## 2. Model Outputs — Built with Llama (Llama 3.1 Community License)
+
+Agent reasoning traces in `nebius/SWE-agent-trajectories` were generated using `Meta-Llama-3.1-70B-Instruct`.
+**Built with Llama.** Model outputs are subject to the [Llama 3.1 Community License Agreement](https://www.llama.com/llama3_1/license/).
+
+---
+
+## 3. Upstream Open-Source Repositories (MIT / BSD / Apache-2.0)
 
 Issue excerpts and unified diff patches across the 24 challenge sessions originate from the following permissively licensed open-source repositories:
 
